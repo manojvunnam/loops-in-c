@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int battery, n, drain, total = 0;
+    scanf("%d", &battery);
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &drain);
+        total += drain;
+    }
+    int remaining = battery - total;
+    printf("Remaining Battery: %d%%", remaining);
+    return 0;
+}
