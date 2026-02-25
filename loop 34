@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int N, i;
+    int score;
+    int total = 0;
+    int below40 = 0;
+    float average;
+    scanf("%d", &N);
+    for(i = 0; i < N; i++) {
+        scanf("%d", &score);
+        total += score;
+        if(score < 40) {
+            below40++;
+        }
+    }
+    average = (float)total / N;
+    printf("Average Score: %.2f\n", average);
+    printf("Subjects Below 40: %d", below40);
+    return 0;
+}
