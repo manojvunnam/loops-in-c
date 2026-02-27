@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+int n;
+scanf("%d",&n);
+int intial cash,risk count;
+scanf("%d",&intial cash);
+int withdraws;
+for(int i=0;i<n;i++){
+scanf("%d",&withdraws[i]);
+}
+for(int i=0;i<n;i++){
+intial cash=intial cash-withdraws[i];
+if(intial cash<5000){
+risk count++;
+}
+}
+printf("%d\n",intial cash);
+printf("%d\n",risk count);
+return 0;
+}
