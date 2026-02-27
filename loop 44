@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+int n,delay;
+int total delay=0;
+int count delay=0;
+if(scanf("%d",&n)!=1)
+return 0;
+for(int i=0;i<n;i++){
+scanf("%d",&delay);
+total delay=total delay+delay;
+if(delay>30){
+count delay++;
+}
+}
+printf("%d",total delay);
+printf("%d",count delay);
+return 0;
+}
