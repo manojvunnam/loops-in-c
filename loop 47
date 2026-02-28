@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+int n;
+scanf("%d",&n);
+int noise[n];
+int maxnoise=-1;
+int count=0;
+for(int i=0;i<n;i++){
+scanf("%d",&noise[i]);
+if(noise[i]>maxnoise){
+maxnoise=noise[i];
+}
+if(noise[i]>70){
+count++;
+}
+}
+printf("maxnoise=%d\n",maxnoise);
+printf("noise times=%d",count);
+return o;
+}
