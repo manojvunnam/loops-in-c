@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+int n;
+scanf("%d",&n);
+int ratesp[n];
+for(int i=0;i<n;i++){
+scanf("%d",&rates[i]);
+}
+int max_rate=rates[0];
+int danger_count=0;
+for(int i=0;i<n;i++){
+if(rates[i]>max_rate){
+max_rate=rates[i];
+}
+if(rates[i]>140){
+danger_count++;
+}
+}
+printf("heart rate:%d\n",max_rate);
+printf("danger readings:%d\n",danger_count);
+return 0;
+}
