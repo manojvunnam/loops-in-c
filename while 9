@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+int n;
+scanf("%d",&n);
+int count=0,maxstreak=0;
+int i=0,status;
+while(i<n){
+scanf("%d",&status);
+if(status==0){
+count++;
+if(count>maxstreak){
+maxstreak=count;
+}
+}else{
+count=0;
+}
+i++;
+}
+printf("long default streak:%d\n",maxstreak);
+return 0;
+}
