@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+int capacity,n;
+int i=0;
+int change;
+int occupied=0;
+int count=0;
+scanf("%d %d",&capacity,&n);
+int limit=(capacity*90)/100;
+while(i<n){
+scanf("%d",&change);
+occupied=occupied+change;
+if(occupied<0){
+occupaid=0;
+}
+if(occupied>capacity){
+occupied=capacity;
+}
+if(occupied>limit){
+count++;
+}
+i++;
+}
+printf("occupied:%d\n",occupied);
+printf("critical hours:%d\n",count);
+return 0;
+}
