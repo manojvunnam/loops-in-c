@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+int fuel,n;
+scanf("%d",&fuel);
+scanf("%d",&n);
+int trips[n];
+for(int i=0;i<n;i++){
+scanf("%d",&trips[i]);
+}
+int i=0;
+int completed=0;
+while(i<n&&fuel>=trips[i]){
+fuel-=trips[i];
+completed++;
+i++;
+}
+printf("completed trips:%d\n",completed);
+printf("remaining fuel:%d\n",fuel);
+return 0;
+}
