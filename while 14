@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+int n,i=0;
+scanf("%d",&n);
+int power[100];
+int max_usage,sugar_hours=0;
+while(i<n){
+if(power[i]>max_usage){
+max_usage=power[i];
+}
+if(power[i]>5){
+surge_hours++;
+}
+i++;
+}
+printf("max usage:%d\n",max_usage);
+printf("surge hours:%d",surge_hours);
+return 0;
+}
