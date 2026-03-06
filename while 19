@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+int n,capacity;
+scanf("%d %d",&n,&capacity);
+int loads[n];
+for(int i=0;i<n;i++){
+scanf("%d",&loads[i]);
+}
+int safehours=0;
+int count=0;
+int i=0;
+while(i<n){
+if(loads[i]<=capacity){
+safehours++;
+}else{
+count++;
+}
+i++;
+}
+printf("safe hours:%d\n",safehours);
+printf("failure count:%d",count);
+return 0;
+}
