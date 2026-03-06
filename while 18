@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+int balance;
+int n,purchase;
+int i=0;
+int success=0;
+scanf("%d",&balance);
+scanf("%d",&n);
+while(i<n){
+scanf("%d",&purchase);
+if(balance>=purchase){
+balance=balance-purchase;
+success++;
+}
+i++;
+}
+printf("successful purchase:%d\n",success);
+printf("final balance:%d\n",balance);
+return 0;
+}
