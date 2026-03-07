@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+int fuel,n;
+scanf("%d %d",&fuel,&n);
+int burn[n];
+for(int i=0;i<n;i++){
+scanf("%d",&burn[i]);
+}
+int i=0;
+while(i<n){
+if(fuel>=burn[i]){
+fuel=fuel-burn[i];
+i++;
+}else{
+break;
+}
+}
+printf("emergency stage:%d\n",i+n);
+printf("fuel wasted:%d",fuel);
+return 0;
+}
