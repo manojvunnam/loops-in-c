@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+int n;
+scanf("%d",&n);
+int i=0;
+int vehicles[100];
+int cogestionminuets=0;
+int currentstreak=0;
+int longstreak=0;
+while(i<n){
+scanf("%d",&vehicles[i]);
+i++;
+}
+i=0;
+while(i<n){
+if(vehicles[i]>20){
+congestionminuets++;
+currentstreak++;
+if(currentstreak>longstreak){
+longstreak=currentstreak;
+}
+}
+else{
+currentstreak=0;
+}
+i++;
+}
+printf("congestion minuets:%d",congstionminuets);
+printf("longest congestion streak:%d",longeststreak);
+return 0;
+}
