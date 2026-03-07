@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main(){
+int n,i=0;
+int reading;
+int unsafe=0;
+int breakdown=-1;
+scanf("%d",&n);
+while(i<n){
+scanf("%d",&reading);
+if(reading>70){
+unsafe++;
+}
+if(reading>=85 && breakdown==-1){
+breakdown=i+1;
+}
+i++;
+}
+if(breakdown!=-1){
+printf("breakdown at reading:%d\n",breakdown);
+}else{
+printf("breakdown at reading:not occured\n");
+}
+printf("unsafe readings:%d",unsafe);
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
