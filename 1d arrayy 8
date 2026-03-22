@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int days[] = {1, 2, 3, 4, 5, 6};
+    int n = sizeof(days) / sizeof(days[0]);
+    int workingDays = 0;
+    int holidays = 0;
+    for (int i = 0; i < n; i++) {
+        if (days[i] % 2 == 0) {
+            workingDays++;
+        } else {
+            holidays++;
+        }
+    }
+    printf("Working days: %d\n", workingDays);
+    printf("Holidays: %d\n", holidays);
+    return 0;
+}
