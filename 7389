@@ -1,0 +1,27 @@
+#include <stdio.h>
+int removeDuplicates(int arr[], int n) {
+    int k = 0; 
+    for (int i = 0; i < n; i++) {
+        int isDuplicate = 0;
+        for (int j = 0; j < k; j++) {
+            if (arr[i] == arr[j]) {
+                isDuplicate = 1;
+                break;
+            }
+        }
+        if (!isDuplicate) {
+            arr[k++] = arr[i];
+        }
+    }
+    return k; 
+}
+int main() {
+    int arr[] = {101, 102, 101, 103, 102, 104};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int newSize = removeDuplicates(arr, n);
+    printf("Unique IDs: ");
+    for (int i = 0; i < newSize; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
