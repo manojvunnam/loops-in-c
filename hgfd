@@ -1,0 +1,17 @@
+#include <stdlib.h>
+int cmp(const void *a, const void *b) {
+    return *(int *)b - *(int *)a;
+}
+double minimumTotalPrice(int* prices, int pricesSize, int* discounts, int discountsSize) {
+    qsort(prices, pricesSize, sizeof(int), cmp);
+    qsort(discounts, discountsSize, sizeof(int), cmp);
+    double total = 0.0;
+    int k = pricesSize < discountsSize ? pricesSize : discountsSize;
+    for (int i = 0; i < k; i++) {
+        total += (double)prices[i] * (100 - discounts[i]) / 100.0;
+    }
+    for (int i = k; i < pricesSize; i++) {
+        total += prices[i];
+    }
+    return total;
+}
