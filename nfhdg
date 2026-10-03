@@ -1,0 +1,33 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    int successful=0;cancelled=0;
+    printf("online order cancellation risk moniter\n");
+    printf("enter order status:\n");
+    printf("1-successful order:\n");
+    printf("2-cancelled order\n");
+    printf("0-stop\n");
+    printf("enter your coice:");
+    scanf("%d",&choice);
+    while(choice!=0){
+        if(choice==1){
+            successful++;
+        }
+        else if(choice==2){
+            cancelled++;
+        }
+    else{
+        printf("invalid choice!\n");
+    }
+    printf("enter your choice:");
+    scanf("%d",&choice);
+}
+printf("\n total successful orders:%d\n",successful);
+printf("total cancelled orders:%d\n",cancelled);
+if(cancelled>successful){
+    printf("risk status:risk fledged\n");
+}else{
+    printf("risk status:no risk\n");
+}
+    return 0;
+}
