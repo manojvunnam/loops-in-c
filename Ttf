@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+int maxcapacity,n;
+int treated=0,rejected=0;
+int patients,i=0;
+scanf("%d",&maxcapacity);
+scanf("%d",&n);
+while(i<n){
+scanf("%d",&patients);
+if(treated+patients<=maxcapacity){
+treated+=patients;
+}else{
+int remaining=maxcapacity-treated;
+if(remaining>0){
+treated+=remaining;
+rejected+=patients-remaining;
+}else{
+rejected+=patients;
+}
+}
+i++
+}
+printf("treated patients:%d\n",treated);
+printf("rejected patients:%d",rejected);
+return 0;
+}
